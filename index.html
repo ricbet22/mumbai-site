@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Blog Tech & Money - Découvrez les meilleures astuces technologiques et financières utiles au quotidien.">
+  <title>divertissement et gaming</title></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+
+    body {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #f1f5f9;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: linear-gradient(90deg, #3b82f6, red);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 { font-size: 1.3em; color: white; }
+    nav a { color: white; margin: 0 10px; text-decoration: none; transition: 0.3s; }
+    nav a:hover { color: #0f172a; }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .hero {
+      background:url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80') center/cover;
+      color: white;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-shadow: 0 0 15px black;
+    }
+
+    .hero h2 {
+      font-size: 2em;
+      animation: fadeInDown 1s ease;
+    }
+
+    .hero p {
+      margin-top: 10px;
+      font-size: 1.1em;
+      animation: fadeInUp 1s ease;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .articles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .article {
+      background: #1e29;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .article:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+    }
+
+    .article img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .article-content {
+      padding: 15px;
+      text-align: left;
+    }
+
+    .article-content h3{
+      color: #38bdf8;
+      margin-bottom: 10px;
+    }
+
+    .article-content p {
+      color: #cbd5e1;
+      font-size: 0.95em;
+      line-height: 1.5em;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: linear-gradient(90deg, #10b981, #3b82f6);
+      border-radius: 10px;
+      text-decoration: none;
+      color: white;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #3b82f6;
+    }
+
+    .contact {
+      max-width: 500px;
+      margin: auto;
+      background: #1e293b;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+      animation: fadeInUp 1s ease;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: yellow;
+      color: black;
+      margin-bottom: 15px;
+      font-size: 1em;
+    }
+
+    input:focus, textarea:focus { background: white; }
+
+    button {
+      background: linear-gradient(90deg, green, red);
+      border: none;
+      color: white;
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: 0.3s;
+      width: 100%;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px white;
+    }
+
+    footer {
+      background: #1e293b;
+      text-align: center;
+      padding: 20px;
+      color: #94a3b8;
+    }
+
+    footer a { color: white; text-decoration: green; }
+
+    .socials a {
+      color: green  red;
+      font-size: 2.5em;
+      margin: 0 20px;
+      transition: 0.3s;
+    }
+
+    .socials a:hover {
+      transform: scale(1.5);
+      color: #38bdf8;
+    }
+
+    /* Section pub */
+    .ads {
+      background: #fac;
+      padding: 20px;
+      margin: 40px auto;
+      border-radius: 10px;
+      color: #1e293b;
+      text-align: center;
+    }
+    .modal {
+  display:none;
+  position:fixed;
+  top:0;left:0;
+  width:100%;height:100%;
+  background:rgba(0,0,0,0.7);
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+}
+
+.modal-content {
+  background:#1e293b;
+  padding:25px;
+  border-radius:15px;
+  width:90%;
+  max-width:400px;
+  text-align:center;
+}
+
+.pay-btn {
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border:none;
+  border-radius:10px;
+  color:white;
+  cursor:pointer;
+}
+
+.paypal { background:#0070ba; }
+.momo { background:#f59e0b; }
+
+.close-btn {
+  background:red;
+  width:100%;
+  padding:10px;
+  border:none;
+  border-radius:10px;
+  color:white;
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>RIC MARKET 🛒🛒</h1>
+    <nav>
+      <a href="#home">Accueil</a>
+      <a href="#articles">Articles</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <h2>BIENVENUE SUR NOTRE SITE DE SERVICE</h2>
+    <p>Découvrez les meilleures trucs utiles pour vous au quotidien</p>
+  </section>
+
+  <!-- Emplacement Google AdSense -->
+  <div class="ads">
+    <p>🪙 <strong>VOTRE PUBLICITÉ</strong></p>
+    <!-- Colle ton code AdSense ici -->
+  </div>
+
+  <section id="articles">
+    <h2>Voici quelques services que nous vous proposons </h2>
+
+    <div class="articles">
+      <div class="article">
+        <img src="photo.jpg" alt="UN COMPTE BLOX FRUIT">
+        <div class="article-content">
+          <h3>UN COMPTE DE JEU BLOX FRUIT </h3>
+          <p>Nous vous proposons un compte blox fruit 
+          
+          de niveau maximum (2800) SEA 3 avec beaucoups de fruits puissants tels que le doudha, le dragon,le yéti </p>
+          <button onclick="openModal(21000)" class="btn">ACHETER à 35$</button>
+        </div>
+      </div>
+
+      <div class="article">
+        <img src="IMG_20260409_165217_300.jpeg" alt="COMMENT JOUER A GOD HAND SUR ANDROÏD SAN LAG ">
+        <div class="article-content">
+          <h3>COMMENT JOUER A GOD HAND SUR ANDROÏD SAN LAG ET SANS BUG ET TRÈS FLUIDE</h3>
+          <p>Tu es passionné du jeu god hand alors que tu n'as pas de console de jeu? 
+          
+          nous vous montrons comment avoir god hand sur votre téléphone androïd .</p>
+          <button onclick="openModal(3000)" class="btn">Télécharger à 5$</button>
+        </div>
+      </div>
+
+      <div class="article">
+        <img src="image_aigc_f8806577-4233-4fe3-9cc7-0992c0086995.png" alt="comment créer des vidéos AI virales pour tik tok ">
+        <div class="article-content">
+          <h3>comment créer des vidéos AI virales pour tik tok</h3>
+          <p>Nous vous montrons ici comment utiliser l’IA pour créer des  vidéos et faire des annimations</p>
+          <button onclick="openModal(1000)" class="btn">Télécharger la vidéos de formation pour 1,5$</button>
+        </div>
+      </div>
+
+      <div class="article">
+        <img src="IMG_20260409_153616_481.png" alt="JOUER A GTA SAN ANDREAS SUR VOTRE TELEPHONE">
+        <div class="article-content">
+          <h3>JOUER A GTA SAN ANDRÉAS SUR ANDROÏD </h3>
+          <p>le jeu GTA SAN ANDRÉAS coute très chère su le play store et su beaucoups d'autres sites .
+          ici nous vous le proposons à vil prix</p>
+          <button onclick="openModal(1500)" class="btn">Télécharger pour seulement 2,5$</button>
+        </div>
+      </div>
+
+      <div class="article">
+        <img src="images (2) (1).jpeg" alt="Carte bancaire virtuelle">
+        <div class="article-content">
+          <h3>Carte bancaire virtuelle gratuite</h3>
+          <p>Vous désirez faire des paiements en ligne mais vous n'avez pas de carte bancaire ? La solution est là.</p>
+          <p>Voici pour vous une carte bancaire totalement gratuite.</p>
+          <a href="https://payqin.page.link/o1n2pDCCerf3y5V88" class="btn">Télécharger pour 0$</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contacte-nous 📩</h2>
+    <div class="contact">
+      <form id="contactForm" action="https://formspree.io/f/mkoplwlg" method="POST">
+  <input type="text" name="name" placeholder="Ton nom" required>
+  <input type="email" name="email" placeholder="Ton email" required>
+  <textarea name="message" rows="3" placeholder="Ton message..." required></textarea>
+  <button type="submit">Envoyer</button>
+</form>
+
+      <div class="socials" style="margin-top:20px;">
+        <p>Retrouvez-nous sur :</p>
+        <a href="https://wa.me/message/HVCPBAQEWB5PD1"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.tiktok.com/@histoire.drle268?_r=1&_t=ZN-95Qst4uIPdG"><i class="fab fa-tiktok"></i></a>
+        <a href="https://youtube.com/@histoiredrole-e8x?si=QuAHv_5SF9njzDWu"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Tech & Gaming — Créé par <a href="#">RICHARD</a>
+  </footer>
+  <div id="paymentModal" class="modal">
+  <div class="modal-content">
+
+    <h2>Choisir un moyen de paiement</h2>
+    <p id="amountText">Montant :</p>
+
+    <button class="pay-btn paypal" onclick="payWithPaypal()">💳 PayPal</button>
+    <button class="pay-btn momo" onclick="payWithMoMo()">📱 Mobile Money</button>
+    <button class="close-btn" onclick="closeModal()">Fermer</button>
+
+  </div>
+</div>
+
+ <script>
+const form = document.getElementById('contactForm');
+
+/* MESSAGE CONTACT */
+const messageBox = document.createElement('div');
+messageBox.style.position = 'fixed';
+messageBox.style.bottom = '-100px';
+messageBox.style.left = '50%';
+messageBox.style.transform = 'translateX(-50%)';
+messageBox.style.background = 'linear-gradient(90deg, #10b981, #3b82f6)';
+messageBox.style.color = 'white';
+messageBox.style.padding = '15px 25px';
+messageBox.style.borderRadius = '10px';
+messageBox.style.transition = '0.5s';
+messageBox.style.opacity = '0';
+messageBox.textContent = '✅ Message envoyé !';
+document.body.appendChild(messageBox);
+
+form?.addEventListener('submit', () => {
+  messageBox.style.bottom = '50px';
+  messageBox.style.opacity = '1';
+
+  setTimeout(() => {
+    messageBox.style.bottom = '-100px';
+    messageBox.style.opacity = '0';
+  }, 3000);
+});
+
+/* ========================= */
+let selectedAmount = 0;
+
+function openModal(amount){
+  selectedAmount = amount;
+  document.getElementById("amountText").innerText =
+    "Montant : " + amount + " FCFA";
+
+  document.getElementById("paymentModal").style.display = "flex";
+}
+
+function closeModal(){
+  document.getElementById("paymentModal").style.display = "none";
+}
+
+/* ✅ PAYPAL (ANCIEN REMIS) */
+function payWithPaypal(){
+  let usd = (selectedAmount / 600).toFixed(2);
+
+  window.location.href =
+    "https://www.paypal.com/cgi-bin/webscr?cmd=_xclick" +
+    "&business=vuesurlenet222@gmail.com" +
+    "&currency_code=USD" +
+    "&amount=" + usd;
+}
+
+/* MOBILE MONEY (ULTRA CLEAN) */
+async function payWithMoMo(){
+
+  if (!selectedAmount || selectedAmount <= 0) {
+    alert("❌ Montant invalide");
+    return;
+  }
+
+  const btn = document.querySelector(".momo");
+
+  try {
+
+    btn.innerText = "⏳ Paiement...";
+    btn.disabled = true;
+
+    const res = await fetch("https://boutique-server-1-wz16.onrender.com/create-payment", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ amount: selectedAmount })
+    });
+
+    const data = await res.json();
+
+    console.log("SERVER:", data);
+
+    if (!res.ok) {
+      throw new Error("Serveur HS");
+    }
+
+    if (data.success && data.url) {
+      window.location.href = data.url;
+    } else {
+      alert(data.message || "❌ Paiement échoué");
+    }
+
+  } catch (err) {
+    console.error(err);
+    alert("❌ Impossible de contacter le serveur");
+  }
+
+  btn.innerText = "📱 Mobile Money";
+  btn.disabled = false;
+}
+</script>
+
+</body>
+</html>
