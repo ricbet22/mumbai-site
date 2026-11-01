@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Blog Tech & Money - Découvrez les meilleures astuces technologiques et financières utiles au quotidien.">
-  <title>divertissement et gaming</title></title>
+  <title>divertissement et gaming</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
@@ -37,14 +38,14 @@
     }
 
     .hero {
-      background:url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80') center/cover;
-      color: white;
-      height: 60vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      text-shadow: 0 0 15px black;
+  background: url('https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1600') center/cover no-repeat;
+  color: white;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-shadow: 0 0 15px black;
     }
 
     .hero h2 {
@@ -54,7 +55,7 @@
 
     .hero p {
       margin-top: 10px;
-      font-size: 1.1em;
+      font-size: 1.5em;
       animation: fadeInUp 1s ease;
     }
 
@@ -70,9 +71,15 @@
 
     .articles {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 25px;
       margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      .articles {
+        grid-template-columns: 1fr;
+      }
     }
 
     .article {
@@ -141,7 +148,7 @@
       padding: 12px;
       border: none;
       border-radius: 10px;
-      background: yellow;
+      background: lightblue;
       color: black;
       margin-bottom: 15px;
       font-size: 1em;
@@ -189,61 +196,61 @@
 
     /* Section pub */
     .ads {
-      background: #fac;
+      background:#fac;
       padding: 20px;
       margin: 40px auto;
       border-radius: 10px;
       color: #1e293b;
       text-align: center;
     }
+
     .modal {
-  display:none;
-  position:fixed;
-  top:0;left:0;
-  width:100%;height:100%;
-  background:rgba(0,0,0,0.7);
-  justify-content:center;
-  align-items:center;
-  z-index:9999;
-}
+      display:none;
+      position:fixed;
+      top:0;left:0;
+      width:100%;height:100%;
+      background:rgba(0,0,0,0.7);
+      justify-content:center;
+      align-items:center;
+      z-index:9999;
+    }
 
-.modal-content {
-  background:#1e293b;
-  padding:25px;
-  border-radius:15px;
-  width:90%;
-  max-width:400px;
-  text-align:center;
-}
+    .modal-content {
+      background:#1e293b;
+      padding:25px;
+      border-radius:15px;
+      width:90%;
+      max-width:400px;
+      text-align:center;
+    }
 
-.pay-btn {
-  width:100%;
-  padding:12px;
-  margin:10px 0;
-  border:none;
-  border-radius:10px;
-  color:white;
-  cursor:pointer;
-}
+    .pay-btn {
+      width:100%;
+      padding:12px;
+      margin:10px 0;
+      border:none;
+      border-radius:10px;
+      color:white;
+      cursor:pointer;
+    }
 
-.paypal { background:#0070ba; }
-.momo { background:#f59e0b; }
+    .paypal { background:#0070ba; }
 
-.close-btn {
-  background:red;
-  width:100%;
-  padding:10px;
-  border:none;
-  border-radius:10px;
-  color:white;
-}
+    .close-btn {
+      background:red;
+      width:100%;
+      padding:10px;
+      border:none;
+      border-radius:10px;
+      color:white;
+    }
 
   </style>
 </head>
 <body>
 
   <header>
-    <h1>RIC MARKET 🛒🛒</h1>
+    <h1>BLOX MARKET 🛒🛒</h1>
     <nav>
       <a href="#home">Accueil</a>
       <a href="#articles">Articles</a>
@@ -251,68 +258,71 @@
   </header>
 
   <section id="home" class="hero">
-    <h2>BIENVENUE SUR NOTRE SITE DE SERVICE</h2>
-    <p>Découvrez les meilleures trucs utiles pour vous au quotidien</p>
+    <h2>BIENVENUE SUR NOTRE SITE D'ACHAT DE COMPTES </h2>
+    <p>Tu es fan des jeux ? 
+      Nous avons des comptes boostés prêts pour utilisation avec plein de trucs de ouf </p>
   </section>
 
   <!-- Emplacement Google AdSense -->
   <div class="ads">
-    <p>🪙 <strong>NOUS VOUS PROPOSONS</strong></p>
+    <p> <strong>LES PLUS DEMANDÉS </strong></p>
     <!-- Colle ton code AdSense ici -->
   </div>
 
   <section id="articles">
-    <h2>Voici quelques services que nous vous proposons </h2>
+    <h2>Voici quelques comptes qui pouraient vous intéresser</h2>
 
     <div class="articles">
       <div class="article">
-        <img src="photo.jpg" alt="UN COMPTE BLOX FRUIT">
+        <img src="file_0000000049e8820eab4895a0c7808ec6.png" alt="UN COMPTE BLOX FRUIT">
         <div class="article-content">
           <h3>UN COMPTE DE JEU BLOX FRUIT </h3>
-          <p>Nous vous proposons un compte blox fruit 
+          <p>Nous vous proposons un compte blox fruit de niveau 2800 SEA 3 avec beaucoups de fruits puissants tels que le doudha, le dragon,le yéti avec des fruits permanents tels que dragon ,yéti ,kitsuné
+          <h3>NB: Le compte n'est associé à aucun email ou numéro de téléphone. Aucun problème de connection
+          cliquer sur le bouton acheter pour reçevoir les informations de connection</h3></p>
+          <button onclick="openModal(26800)" class="btn">ACHETER à 45,55$</button>
+        </div>
+      </div>
+
+      <div class="article">
+        <img src="file_0000000049e8820eab4895a0c7808ec6.png" alt="COMMENT JOUER A GOD HAND SUR ANDROÏD SAN LAG ">
+        <div class="article-content">
+          <h3>COMPTE DE JEU ROBLOX</h3>
+          <p>Un compte de jeu roblox de niveau 3000 avec certains fruits de haute puissance tel que le gaz, la flamme , le léopard , blade 
           
-          de niveau maximum (2800) SEA 3 avec beaucoups de fruits puissants tels que le doudha, le dragon,le yéti </p>
-          <button onclick="openModal(21000)" class="btn">ACHETER à 35$</button>
+          <h3>NB: Le compte n'est associé à aucun email ou numéro de téléphone. Aucun problème de connection
+          cliquer sur le bouton acheter pour reçevoir les informations de connection</h3></p>
+          <button onclick="openModal(17700)" class="btn">ACHETER à 30$</button>
         </div>
       </div>
 
       <div class="article">
-        <img src="IMG_20260409_165217_300.jpeg" alt="COMMENT JOUER A GOD HAND SUR ANDROÏD SAN LAG ">
+        <img src="file_0000000049e8820eab4895a0c7808ec6.png" alt="compte roblox">
         <div class="article-content">
-          <h3>COMMENT JOUER A GOD HAND SUR ANDROÏD SAN LAG ET SANS BUG ET TRÈS FLUIDE</h3>
-          <p>Tu es passionné du jeu god hand alors que tu n'as pas de console de jeu? 
+          <h3>COMPTE ROBLOX </h3>
+          <p>Un compte de jeu roblox de niveau 1940 avec les fruits tels que budah le dragon de l'ouest le portail 
+          <h3>NB: Le compte n'est associé à aucun email ou numéro de téléphone. Aucun problème de connection
+          cliquer sur le bouton acheter pour reçevoir les informations de connection</h3></p>
+          <button onclick="openModal(14700)" class="btn">Acheter pour 25$</button>
+        </div>
+      </div>
+
+      <div class="article">
+        <img src="image_146eb6bb.jpg" alt="ACHAT DE ROBUX">
+        <div class="article-content">
+          <h3>5000 robux</h3>
+          <p> À un prix exeptionel, recharger vorte compte de jeu roblox</p>
+          <button onclick="openModal(17701)" class="btn">ACHETER POUR 30$</button>
+        </div>
+      </div>
+
+      <div class="article">
+        <img src="image_146eb6bb.jpg" alt="1000 robux">
+        <div class="article-content">
+          <h3>1000 ROBUX </h3>
+          <p>L'une de nos meilleurs offres.</p>
           
-          nous vous montrons comment avoir god hand sur votre téléphone androïd .</p>
-          <button onclick="openModal(3000)" class="btn">Télécharger à 5$</button>
-        </div>
-      </div>
-
-      <div class="article">
-        <img src="image_aigc_f8806577-4233-4fe3-9cc7-0992c0086995.png" alt="comment créer des vidéos AI virales pour tik tok ">
-        <div class="article-content">
-          <h3>comment créer des vidéos AI virales pour tik tok</h3>
-          <p>Nous vous montrons ici comment utiliser l’IA pour créer des  vidéos et faire des annimations</p>
-          <button onclick="openModal(1000)" class="btn">Télécharger la vidéos de formation pour 1,5$</button>
-        </div>
-      </div>
-
-      <div class="article">
-        <img src="IMG_20260409_153616_481.png" alt="JOUER A GTA SAN ANDREAS SUR VOTRE TELEPHONE">
-        <div class="article-content">
-          <h3>JOUER A GTA SAN ANDRÉAS SUR ANDROÏD </h3>
-          <p>le jeu GTA SAN ANDRÉAS coute très chère su le play store et su beaucoups d'autres sites .
-          ici nous vous le proposons à vil prix</p>
-          <button onclick="openModal(1500)" class="btn">Télécharger pour seulement 2,5$</button>
-        </div>
-      </div>
-
-      <div class="article">
-        <img src="images (2) (1).jpeg" alt="Carte bancaire virtuelle">
-        <div class="article-content">
-          <h3>Carte bancaire virtuelle gratuite</h3>
-          <p>Vous désirez faire des paiements en ligne mais vous n'avez pas de carte bancaire ? La solution est là.</p>
-          <p>Voici pour vous une carte bancaire totalement gratuite.</p>
-          <a href="https://payqin.page.link/o1n2pDCCerf3y5V88" class="btn">Télécharger pour 0$</a>
+          <button onclick="openModal(5900)" class="btn">ACHETER à 10$</button>
         </div>
       </div>
 
@@ -320,41 +330,41 @@
   </section>
 
   <section id="contact">
-    <h2>Contacte-nous 📩</h2>
+    <h2>VOUS AVEZ UN PROBLEME ? CONTACTEZ NOUS</h2>
     <div class="contact">
       <form id="contactForm" action="https://formspree.io/f/mkoplwlg" method="POST">
-  <input type="text" name="name" placeholder="Ton nom" required>
-  <input type="email" name="email" placeholder="Ton email" required>
-  <textarea name="message" rows="3" placeholder="Ton message..." required></textarea>
-  <button type="submit">Envoyer</button>
-</form>
+        <input type="text" name="name" placeholder="Ton nom" required>
+        <input type="email" name="email" placeholder="Ton email" required>
+        <textarea name="message" rows="2" placeholder="Votre inquiétude" required></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
 
       <div class="socials" style="margin-top:20px;">
         <p>Retrouvez-nous sur :</p>
-        <a href="https://wa.me/message/HVCPBAQEWB5PD1"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://www.tiktok.com/@histoire.drle268?_r=1&_t=ZN-95Qst4uIPdG"><i class="fab fa-tiktok"></i></a>
+        <a href="https://wa.me/message/EFT2SCY5K7ZIO1"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.tiktok.com/@flexygolden?_r=1&_t=ZN-9B3ATFRV2zm"><i class="fab fa-tiktok"></i></a>
         <a href="https://youtube.com/@histoiredrole-e8x?si=QuAHv_5SF9njzDWu"><i class="fab fa-youtube"></i></a>
       </div>
     </div>
   </section>
 
   <footer>
-    © 2026 Tech & Gaming — Créé par <a href="#">RICHARD</a>
+    © 2026 Tech & Gaming  <a href="#">BLOX MARKET</a>
   </footer>
+
   <div id="paymentModal" class="modal">
-  <div class="modal-content">
+    <div class="modal-content">
 
-    <h2>Choisir un moyen de paiement</h2>
-    <p id="amountText">Montant :</p>
+      <h2>PAIMENT PAR PAYPAL</h2>
+      <p id="amountText">montant :</p>
 
-    <button class="pay-btn paypal" onclick="payWithPaypal()">💳 PayPal</button>
-    <button class="pay-btn momo" onclick="payWithMoMo()">📱 Mobile Money</button>
-    <button class="close-btn" onclick="closeModal()">Fermer</button>
+      <button class="pay-btn paypal" onclick="payWithPaypal()">💳 PayPal</button>
+      <button class="close-btn" onclick="closeModal()">Fermer</button>
 
+    </div>
   </div>
-</div>
 
- <script>
+  <script>
 const form = document.getElementById('contactForm');
 
 /* MESSAGE CONTACT */
@@ -383,77 +393,53 @@ form?.addEventListener('submit', () => {
 });
 
 /* ========================= */
+/* NOUVEAU SYSTEME PAYPAL */
+/* ========================= */
+
+const paypalLinks = {
+  26800: "https://www.paypal.com/ncp/payment/QX7ELDLU8MGD6",
+  17700: "https://www.paypal.com/ncp/payment/SDUGLGKPFMC7L",
+  14700: "https://www.paypal.com/ncp/payment/XTU9AFJ63PXDN",
+  17701: "https://www.paypal.com/ncp/payment/9ULVTN8SH6F4E",
+  5900: "https://www.paypal.com/ncp/payment/LLABTMGJSP9S2"
+};
+
 let selectedAmount = 0;
 
-function openModal(amount){
+function openModal(amount) {
   selectedAmount = amount;
+
+  const prices = {
+    26800: "45,55 $",
+    17700: "30,00 $",
+    14700: "25,00 $",
+    17701: "30,00 $",
+    5900: "10,00 $"
+  };
+
   document.getElementById("amountText").innerText =
-    "Montant : " + amount + " FCFA";
+    "Montant à payer : " + prices[amount];
 
   document.getElementById("paymentModal").style.display = "flex";
 }
 
-function closeModal(){
+function closeModal() {
   document.getElementById("paymentModal").style.display = "none";
 }
 
-/* ✅ PAYPAL (ANCIEN REMIS) */
-function payWithPaypal(){
-  let usd = (selectedAmount / 600).toFixed(2);
+/* REDIRECTION PAYPAL */
+function payWithPaypal() {
+  const link = paypalLinks[selectedAmount];
 
-  window.location.href =
-    "https://www.paypal.com/cgi-bin/webscr?cmd=_xclick" +
-    "&business=vuesurlenet222@gmail.com" +
-    "&currency_code=USD" +
-    "&amount=" + usd;
-}
-
-/* MOBILE MONEY (ULTRA CLEAN) */
-async function payWithMoMo(){
-
-  if (!selectedAmount || selectedAmount <= 0) {
-    alert("❌ Montant invalide");
+  if (!link) {
+    alert("Lien PayPal introuvable.");
     return;
   }
 
-  const btn = document.querySelector(".momo");
-
-  try {
-
-    btn.innerText = "⏳ Paiement...";
-    btn.disabled = true;
-
-    const res = await fetch("https://boutique-server-1-wz16.onrender.com/create-payment", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({ amount: selectedAmount })
-    });
-
-    const data = await res.json();
-
-    console.log("SERVER:", data);
-
-    if (!res.ok) {
-      throw new Error("Serveur HS");
-    }
-
-    if (data.success && data.url) {
-      window.location.href = data.url;
-    } else {
-      alert(data.message || "❌ Paiement échoué");
-    }
-
-  } catch (err) {
-    console.error(err);
-    alert("❌ Impossible de contacter le serveur");
-  }
-
-  btn.innerText = "📱 Mobile Money";
-  btn.disabled = false;
+  window.location.href = link;
 }
 </script>
 
 </body>
-</html>
+  </html>
+  
